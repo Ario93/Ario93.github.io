@@ -6,12 +6,12 @@
   "background_color": "#f8fcfa",
   "icons": [
     {
-      "src": "Alive-Black (1).png",
+      "src": "https://ario93.github.io/Alive-Black (1).png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "Alive-Black (1).png",
+      "src": "https://ario93.github.io/Alive-Black (1).png",
       "type": "image/png",
       "sizes": "512x512",
       "purpose": "maskable"
