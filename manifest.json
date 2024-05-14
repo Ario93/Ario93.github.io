@@ -6,12 +6,12 @@
   "background_color": "#f8fcfa",
   "icons": [
     {
-      "src": "icons/javascript.png",
+      "src": "Alive-Black (1).png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "icons/javascript2.png",
+      "src": "Alive-Black (1).png",
       "type": "image/png",
       "sizes": "512x512",
       "purpose": "maskable"
