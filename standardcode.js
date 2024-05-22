@@ -3531,6 +3531,13 @@ $("#standard_code").chosen().change(function(){
 	document.getElementById('tmp_url_download').style.display="none";
 	document.getElementById('ifr1').style.display="none";
 	document.getElementById('homealive_standard_code').style.display="block";
+	
+	if(selectedstandardcode == ""){
+		
+		document.getElementById('homealive_standard_code').style.display="none";
+		document.getElementById('homealive').style.display="block";
+		
+	}
 			
 });
 
