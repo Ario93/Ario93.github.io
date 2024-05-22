@@ -1,0 +1,1697 @@
+<style>
+
+#iframetbl1,#iframetbl2 {
+    width: calc(100vw - 270px);
+    height: 600px;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+
+
+table, th, td{
+font-size: 12px;
+}
+
+#tbl_nipoc{
+width: 100%;
+}
+
+#iframetbl3
+{
+	float: left;
+	margin-left: -0px;
+	width: 10000px;
+	height: 1000px;
+	left: 0;
+	transform: scale(1);
+	overflow: hidden;
+	top: 10%;
+	-ms-transform-origin: 0 0;
+	-moz-transform-origin: 0 0;
+	-o-transform-origin: 0 0;
+	-webkit-transform-origin: 0 0;
+		
+}
+
+#ifr3 {
+    width: calc(100vw - 270px);
+    height: 1000px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+}
+
+#ifr3::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+#ifr3::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+#ifr3::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#ifr3:hover {
+    scrollbar-color: #ccc transparent;
+}
+	
+#placeholder{
+	margin-top: -65px;
+	margin-left: -0px;
+	width: 10000px;
+	height: 1000px;
+	overflow: hidden;
+}
+
+#iframetbl4
+{
+	float: left;
+	width: 1610px;
+	height: 820px;
+	left: 0;
+	transform: scale(0.78);
+	overflow: hidden;
+	top: 10%;
+	-ms-transform-origin: 0 0;
+	-moz-transform-origin: 0 0;
+	-o-transform-origin: 0 0;
+	-webkit-transform-origin: 0 0;
+		
+}
+
+#iframetbl5{
+	width: calc(100vw - 270px);
+    height: 800px;
+	overflow-x: auto;
+	overflow-y: hidden;
+}
+
+#ifr5{
+	width: calc(100vw - 272px);
+    height: 800px;
+	overflow-x: auto;
+	overflow-y: hidden;
+    }
+	
+	#placeholder_tbl5{
+	margin-top: -53px;
+	margin-left: -1px;
+    height: 802px;
+	overflow: hidden;
+    }
+	
+</style>
+
+<table id="tbl_nipoc" align="center" style="">
+	<tr>
+		<td style="width: 250px;" valign="top">
+					
+			<div id="nipoc" style="margin-left: -40px; width: 250px;">
+						
+				<div id="accordionnipoc">
+							
+					<ul>
+						<li data-toggle="collapse" data-target="#intelligent_pigging" aria-expanded="true" aria-controls="collapse">
+							<table>
+								<tr>
+									<td valign="top"><span class="lbn"></span></td>
+									<td>Intelligent Pigging</td>
+								</tr>
+							</table>
+						</li>
+					</ul>
+								
+					<div style="margin-top: -30px; margin-bottom: -20px;" id="intelligent_pigging" class="collapse" aria-labelledby="heading">
+						<div class="card-body">
+							<div id="accordionisi">
+								
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Reference</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<ul>
+									<li data-toggle="collapse" data-target="#intelligent_pigging_calculator" aria-expanded="true" aria-controls="collapse">
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Calculators</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<div style="margin-top: -30px; margin-bottom: -20px;" id="intelligent_pigging_calculator" class="collapse" aria-labelledby="heading">
+									<div class="card-body">
+											
+										<ul>
+											<li>
+												<table>
+													<tr>
+														<td valign="top"><span class="lbn"></span></td>
+														<td>
+															<a class="all_ifr_bk" id="bk_ffs" onclick="tmp_ifr_sfpoc('_ffs',1,'ffs')">Fitness For Service</a>
+															<a class="all_ifr" style="display: none;" id="ttp_ffs" onclick="tmp_ifr_sfpoc_close('_ffs',1,'ffs')"><b>Fitness For Service</b></a>
+														</td>
+													</tr>
+												</table>
+											</li>
+										</ul>
+												
+									</div>
+								</div>
+											
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Assessment</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<ul>
+									<li data-toggle="collapse" data-target="#intelligent_pigging_last_report" aria-expanded="true" aria-controls="collapse">
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Last Report</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<div style="margin-top: -30px; margin-bottom: -20px;" id="intelligent_pigging_last_report" class="collapse" aria-labelledby="heading">
+									<div class="card-body">
+											
+										<ul>
+											<li>
+												<table>
+													<tr>
+														<td valign="top"><span class="lbn"></span></td>
+														<td>
+															<a class="all_ifr_bk" id="bk_pipetally" onclick="tmp_ifr_sfpoc('_pipetally',4,'pipetally')">Pipetally</a>
+															<a class="all_ifr" style="display: none;" id="ttp_pipetally" onclick="tmp_ifr_sfpoc_close('_pipetally',4,'pipetally')"><b>Pipetally</b></a>
+														</td>
+													</tr>
+												</table>
+											</li>
+										</ul>
+												
+									</div>
+								</div>
+											
+							</div>		
+						</div>
+					</div>
+								
+					<ul>
+						<li data-toggle="collapse" data-target="#cp_monitoring" aria-expanded="true" aria-controls="collapse">
+							<table>
+								<tr>
+									<td valign="top"><span class="lbn"></span></td>
+									<td>CP Monitoring</td>
+								</tr>
+							</table>
+						</li>
+					</ul>
+								
+					<div style="margin-top: -30px; margin-bottom: -20px;" id="cp_monitoring" class="collapse" aria-labelledby="heading">
+						<div class="card-body">
+							<div id="accordionisi">
+								
+								<ul>
+									<li data-toggle="collapse" data-target="#cp_monitoring_reference" aria-expanded="true" aria-controls="collapse">
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Reference</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<div style="margin-top: -30px; margin-bottom: -20px;" id="cp_monitoring_reference" class="collapse" aria-labelledby="heading">
+									<div class="card-body">
+											
+										<ul>
+											<li>
+												<table>
+													<tr>
+														<td valign="top"><span class="lbn"></span></td>
+														<td>
+															<a class="all_ifr_bk" id="bk_refcpmonitoring" onclick="tmp_ifr_sfpoc('_refcpmonitoring',2,'refcpmonitoring')">NACE RP0102</a>
+															<a class="all_ifr" style="display: none;" id="ttp_refcpmonitoring" onclick="tmp_ifr_sfpoc_close('_refcpmonitoring',2,'refcpmonitoring')"><b>NACE RP0102</b></a>
+														</td>
+													</tr>
+												</table>
+											</li>
+										</ul>
+												
+									</div>
+								</div>
+											
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Calculators</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Assessment</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<ul>
+									<li data-toggle="collapse" data-target="#cp_monitoring_last_report" aria-expanded="true" aria-controls="collapse">
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Last Report</td>
+												</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<div style="margin-top: -30px; margin-bottom: -20px;" id="cp_monitoring_last_report" class="collapse" aria-labelledby="heading">
+									<div class="card-body">
+											
+										<ul>
+											<li>
+												<table>
+													<tr>
+														<td valign="top"><span class="lbn"></span></td>
+														<td>
+															<a class="all_ifr_bk" id="bk_cpmonitoring" onclick="tmp_ifr_sfpoc('_cpmonitoring',3,'cpmonitoring')">Potential Pattern</a>
+															<a class="all_ifr" style="display: none;" id="ttp_cpmonitoring" onclick="tmp_ifr_sfpoc_close('_cpmonitoring',3,'cpmonitoring')"><b>Potential Pattern</b></a>
+														</td>
+													</tr>
+												</table>
+											</li>
+										</ul>
+												
+									</div>
+								</div>
+											
+							</div>		
+						</div>
+					</div>
+								
+					<ul>
+						<li data-toggle="collapse" data-target="#row_management" aria-expanded="true" aria-controls="collapse">
+							<table>
+								<tr>
+									<td valign="top"><span class="lbn"></span></td>
+									<td>ROW Management</td>
+								</tr>
+							</table>
+						</li>
+					</ul>
+								
+					<div style="margin-top: -30px; margin-bottom: -20px;" id="row_management" class="collapse" aria-labelledby="heading">
+						<div class="card-body">
+							<div id="accordionisi">
+								
+								<ul>
+									<li data-toggle="collapse" data-target="#row_management_reference" aria-expanded="true" aria-controls="collapse">
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Reference</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+												
+								<div style="margin-top: -30px; margin-bottom: -20px;" id="row_management_reference" class="collapse" aria-labelledby="heading">
+									<div class="card-body">
+												
+										<ul>
+											<li>
+												<table>
+													<tr>
+														<td valign="top"><span class="lbn"></span></td>
+														<td>
+															<a class="all_ifr_bk" id="bk_aligmentsheet" onclick="tmp_ifr_sfpoc('_aligmentsheet',5,'aligmentsheet')">Aligment Sheet</a>
+															<a class="all_ifr" style="display: none;" id="ttp_aligmentsheet" onclick="tmp_ifr_sfpoc_close('_aligmentsheet',5,'Aligment')">Aligment Sheet</a>
+														</td>
+													</tr>
+												</table>
+											</li>
+										</ul>
+													
+									</div>
+								</div>
+												
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Calculators</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+												
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Assessment</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+												
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Last Report</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+							</div>		
+						</div>
+					</div>
+							
+					<ul>
+						<li data-toggle="collapse" data-target="#sidescan_sonar_survey_accoustic_survey" aria-expanded="true" aria-controls="collapse">
+							<table>
+								<tr>
+									<td valign="top"><span class="lbn"></span></td>
+									<td>SideScan Sonar Survey Accoustic Survey</td>
+								</tr>
+							</table>
+						</li>
+					</ul>
+								
+					<div style="margin-top: -30px; margin-bottom: -20px;" id="sidescan_sonar_survey_accoustic_survey" class="collapse" aria-labelledby="heading">
+						<div class="card-body">
+							<div id="accordionisi">
+								
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Reference</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Calculators</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Assessment</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Last Report</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+							</div>		
+						</div>
+					</div>
+								
+					<ul>
+						<li data-toggle="collapse" data-target="#cipsdcvg" aria-expanded="true" aria-controls="collapse">
+							<table>
+								<tr>
+									<td valign="top"><span class="lbn"></span></td>
+									<td>CIPS DCVG</td>
+								</tr>
+							</table>
+						</li>
+					</ul>
+								
+					<div style="margin-top: -30px; margin-bottom: -20px;" id="cipsdcvg" class="collapse" aria-labelledby="heading">
+						<div class="card-body">
+							<div id="accordionisi">
+								
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Reference</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Calculators</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Assessment</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Last Report</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+							</div>		
+						</div>
+					</div>
+								
+					<ul>
+						<li data-toggle="collapse" data-target="#freespan_rectification" aria-expanded="true" aria-controls="collapse">
+							<table>
+								<tr>
+									<td valign="top"><span class="lbn"></span></td>
+									<td>Freespan Rectification</td>
+								</tr>
+							</table>
+						</li>
+					</ul>
+								
+					<div style="margin-top: -30px; margin-bottom: -20px;" id="freespan_rectification" class="collapse" aria-labelledby="heading">
+						<div class="card-body">
+							<div id="accordionisi">
+								
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Reference</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Calculators</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Assessment</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Last Report</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+							</div>		
+						</div>
+					</div>
+								
+					<ul>
+						<li data-toggle="collapse" data-target="#reinforcement" aria-expanded="true" aria-controls="collapse">
+							<table>
+								<tr>
+									<td valign="top"><span class="lbn"></span></td>
+									<td>Reinforcement</td>
+								</tr>
+							</table>
+						</li>
+					</ul>
+								
+					<div style="margin-top: -30px; margin-bottom: -20px;" id="reinforcement" class="collapse" aria-labelledby="heading">
+						<div class="card-body">
+							<div id="accordionisi">
+								
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Reference</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+												
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Calculators</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+												
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Assessment</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+												
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Last Report</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+							</div>		
+						</div>
+					</div>
+								
+					<ul>
+						<li data-toggle="collapse" data-target="#visual_inspection_rov" aria-expanded="true" aria-controls="collapse">
+							<table>
+								<tr>
+									<td valign="top"><span class="lbn"></span></td>
+									<td>Visual Inspection ROV</td>
+								</tr>
+							</table>
+						</li>
+					</ul>
+								
+					<div style="margin-top: -30px; margin-bottom: -20px;" id="visual_inspection_rov" class="collapse" aria-labelledby="heading">
+						<div class="card-body">
+							<div id="accordionisi">
+								
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Reference</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Calculators</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Assessment</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<ul>
+									<li data-toggle="collapse" data-target="#visual_inspection_rov_last_report" aria-expanded="true" aria-controls="collapse">
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Last Report</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<div style="margin-top: -30px; margin-bottom: -20px;" id="visual_inspection_rov_last_report" class="collapse" aria-labelledby="heading">
+									<div class="card-body">
+											
+										<ul>
+											<li>
+												<table>
+													<tr>
+														<td valign="top"><span class="lbn"></span></td>
+														<td>
+															2022
+															<!--<a class="all_ifr_bk" id="bk_nipoc8_2022" onclick="tmp_ifr_sfpoc('8_2022',6,'https://public.tableau.com/views/ip_baru_17146088122110/Depth?:embed=yes&:showVizHome=no&:tabs=no&:toolbar=no','nipoc','none')">2022</a>
+															<a class="all_ifr" style="display: none;" id="ttp_nipoc8_2022" onclick="tmp_ifr_sfpoc_close('8_2022',6,'nipoc','none')">2022</a>-->
+														</td>
+													</tr>
+												</table>
+											</li>
+										</ul>
+												
+									</div>
+								</div>
+											
+							</div>		
+						</div>
+					</div>
+								
+					<ul>
+						<li data-toggle="collapse" data-target="#inline_inspectionlong_range_ut_inspection" aria-expanded="true" aria-controls="collapse">
+							<table>
+								<tr>
+									<td valign="top"><span class="lbn"></span></td>
+									<td>Inline InspectionLong Range UT Inspection</td>
+								</tr>
+							</table>
+						</li>
+					</ul>
+								
+					<div style="margin-top: -30px; margin-bottom: -20px;" id="inline_inspectionlong_range_ut_inspection" class="collapse" aria-labelledby="heading">
+						<div class="card-body">
+							<div id="accordionisi">
+								
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Reference</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Calculators</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Assessment</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Last Report</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+							</div>		
+						</div>
+					</div>
+								
+					<ul>
+						<li data-toggle="collapse" data-target="#pipeline_patrol_leak_survey" aria-expanded="true" aria-controls="collapse">
+							<table>
+								<tr>
+									<td valign="top"><span class="lbn"></span></td>
+									<td>Pipeline Patrol & Leak Survey</td>
+								</tr>
+							</table>
+						</li>
+					</ul>
+								
+					<div style="margin-top: -30px; margin-bottom: -20px;" id="pipeline_patrol_leak_survey" class="collapse" aria-labelledby="heading">
+						<div class="card-body">
+							<div id="accordionisi">
+								
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Reference</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Calculators</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Assessment</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Last Report</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+							</div>		
+						</div>
+					</div>
+							
+					<ul>
+						<li data-toggle="collapse" data-target="#barrier_activities" aria-expanded="true" aria-controls="collapse">
+							<table>
+								<tr>
+									<td valign="top"><span class="lbn"></span></td>
+									<td>Barrier Activities</td>
+								</tr>
+							</table>
+						</li>
+					</ul>
+								
+					<div style="margin-top: -30px; margin-bottom: -20px;" id="barrier_activities" class="collapse" aria-labelledby="heading">
+						<div class="card-body">
+							<div id="accordionisi">
+								
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Reference</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Calculators</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Assessment</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Last Report</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+							</div>		
+						</div>
+					</div>
+								
+					<ul>
+						<li data-toggle="collapse" data-target="#permanen_repair" aria-expanded="true" aria-controls="collapse">
+							<table>
+								<tr>
+									<td valign="top"><span class="lbn"></span></td>
+									<td>Permanen Repair</td>
+								</tr>
+							</table>
+						</li>
+					</ul>
+								
+					<div style="margin-top: -30px; margin-bottom: -20px;" id="permanen_repair" class="collapse" aria-labelledby="heading">
+						<div class="card-body">
+							<div id="accordionisi">
+								
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Reference</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Calculators</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Assessment</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<ul>
+									<li data-toggle="collapse" data-target="#permanen_repair_last_report" aria-expanded="true" aria-controls="collapse">
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Last Report</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<div style="margin-top: -30px; margin-bottom: -20px;" id="permanen_repair_last_report" class="collapse" aria-labelledby="heading">
+									<div class="card-body">
+											
+										<ul>
+											<li>
+												<table>
+													<tr>
+														<td valign="top"><span class="lbn"></span></td>
+														<td>
+															Aligment Sheet GC
+														</td>
+													</tr>
+												</table>
+											</li>
+										</ul>
+												
+									</div>
+								</div>
+											
+							</div>		
+						</div>
+					</div>
+								
+					<ul>
+						<li data-toggle="collapse" data-target="#geohazard_assessment" aria-expanded="true" aria-controls="collapse">
+							<table>
+								<tr>
+									<td valign="top"><span class="lbn"></span></td>
+									<td>Geohazard Assessment</td>
+								</tr>
+							</table>
+						</li>
+					</ul>
+								
+					<div style="margin-top: -30px; margin-bottom: -20px;" id="geohazard_assessment" class="collapse" aria-labelledby="heading">
+						<div class="card-body">
+							<div id="accordionisi">
+								
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Reference</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Calculators</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Assessment</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Last Report</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+							</div>		
+						</div>
+					</div>
+								
+					<ul>
+						<li data-toggle="collapse" data-target="#field_joint_assessment" aria-expanded="true" aria-controls="collapse">
+							<table>
+								<tr>
+									<td valign="top"><span class="lbn"></span></td>
+									<td>Field Joint Assessment</td>
+								</tr>
+							</table>
+						</li>
+					</ul>
+								
+					<div style="margin-top: -30px; margin-bottom: -20px;" id="field_joint_assessment" class="collapse" aria-labelledby="heading">
+						<div class="card-body">
+							<div id="accordionisi">
+								
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Reference</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Calculators</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Assessment</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Last Report</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+							</div>		
+						</div>
+					</div>
+								
+					<ul>
+						<li data-toggle="collapse" data-target="#survey_foto_udara_fotogrametri_lidar" aria-expanded="true" aria-controls="collapse">
+							<table>
+								<tr>
+									<td valign="top"><span class="lbn"></span></td>
+									<td>Survey Foto Udara (Fotogrametri) & LIDAR</td>
+								</tr>
+							</table>
+						</li>
+					</ul>
+								
+					<div style="margin-top: -30px; margin-bottom: -20px;" id="survey_foto_udara_fotogrametri_lidar" class="collapse" aria-labelledby="heading">
+						<div class="card-body">
+							<div id="accordionisi">
+								
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Reference</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Calculators</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Assessment</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Last Report</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+							</div>		
+						</div>
+					</div>
+								
+					<ul>
+						<li data-toggle="collapse" data-target="#coating_defect_sssessment_repair" aria-expanded="true" aria-controls="collapse">
+							<table>
+								<tr>
+									<td valign="top"><span class="lbn"></span></td>
+									<td>Coating Defect Assessment and Repair</td>
+								</tr>
+							</table>
+						</li>
+					</ul>
+								
+					<div style="margin-top: -30px; margin-bottom: -20px;" id="coating_defect_sssessment_repair" class="collapse" aria-labelledby="heading">
+						<div class="card-body">
+							<div id="accordionisi">
+								
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Reference</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Calculators</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Assessment</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Last Report</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+							</div>		
+						</div>
+					</div>
+							
+					<ul>
+						<li data-toggle="collapse" data-target="#pipeline_defect_assessment_reinforcement" aria-expanded="true" aria-controls="collapse">
+							<table>
+								<tr>
+									<td valign="top"><span class="lbn"></span></td>
+									<td>Pipeline Defect Assessment and Reinforcement</td>
+								</tr>
+							</table>
+						</li>
+					</ul>
+								
+					<div style="margin-top: -30px; margin-bottom: -20px;" id="pipeline_defect_assessment_reinforcement" class="collapse" aria-labelledby="heading">
+						<div class="card-body">
+							<div id="accordionisi">
+								
+								<ul>
+									<li>				
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Reference</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Calculators</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Assessment</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Last Report</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+							</div>		
+						</div>
+					</div>
+								
+					<ul>
+						<li data-toggle="collapse" data-target="#pipeline_risk_assessment" aria-expanded="true" aria-controls="collapse">
+							<table>
+								<tr>
+									<td valign="top"><span class="lbn"></span></td>
+									<td>Pipeline Risk Assessment</td>
+								</tr>
+							</table>
+						</li>
+					</ul>
+								
+					<div style="margin-top: -30px; margin-bottom: -20px;" id="pipeline_risk_assessment" class="collapse" aria-labelledby="heading">
+						<div class="card-body">
+							<div id="accordionisi">
+								
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Reference</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Calculators</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Assessment</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Last Report</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+							</div>		
+						</div>
+					</div>
+								
+					<ul>
+						<li data-toggle="collapse" data-target="#risk_profile_update" aria-expanded="true" aria-controls="collapse">
+							<table>
+								<tr>
+									<td valign="top"><span class="lbn"></span></td>
+									<td>Risk Profile Update</td>
+								</tr>
+							</table>
+						</li>
+					</ul>
+								
+					<div style="margin-top: -30px; margin-bottom: -20px;" id="risk_profile_update" class="collapse" aria-labelledby="heading">
+						<div class="card-body">
+							<div id="accordionisi">
+								
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Reference</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Calculators</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Assessment</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Last Report</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+							</div>		
+						</div>
+					</div>
+							
+					<ul>
+						<li data-toggle="collapse" data-target="#corrosion_underwater" aria-expanded="true" aria-controls="collapse">
+							<table>
+								<tr>
+									<td valign="top"><span class="lbn"></span></td>
+									<td>Corrosion Underwater</td>
+								</tr>
+							</table>
+						</li>
+					</ul>
+								
+					<div style="margin-top: -30px; margin-bottom: -20px;" id="corrosion_underwater" class="collapse" aria-labelledby="heading">
+						<div class="card-body">
+							<div id="accordionisi">
+								
+								<ul>
+									<li data-toggle="collapse" data-target="#corrosion_underwater_reference" aria-expanded="true" aria-controls="collapse">				
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Reference</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<div style="margin-top: -30px; margin-bottom: -20px;" id="corrosion_underwater_reference" class="collapse" aria-labelledby="heading">
+									<div class="card-body">
+																
+										<ul>
+											<li>
+												<table>
+													<tr>
+														<td valign="top"><span class="lbn"></span></td>
+														<td>
+															<a class="all_ifr_bk" id="bk_api579" onclick="tmp_ifr_sfpoc('_api579',2,'api579')">API 579-1-2021</a>
+															<a class="all_ifr" style="display: none;" id="ttp_api579" onclick="tmp_ifr_sfpoc_close('_api579',2,'api579')"><b>API 579-1-2021</b></a>
+														</td>
+													</tr>
+												</table>
+											</li>
+														
+											<li>
+												<table>
+													<tr>
+														<td valign="top"><span class="lbn"></span></td>
+														<td>
+															<a class="all_ifr_bk" id="bk_DNVRPF101" onclick="tmp_ifr_sfpoc('_DNVRPF101',2,'DNVRPF101')">DNV-RP-F101</a>
+															<a class="all_ifr" style="display: none;" id="ttp_DNVRPF101" onclick="tmp_ifr_sfpoc_close('_DNVRPF101',2,'DNVRPF101')"><b>DNV-RP-F101</b></a>
+														</td>
+													</tr>
+												</table>
+											</li>
+										</ul>
+																
+									</div>
+								</div>
+											
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Calculators</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Assessment</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Last Report</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+										
+							</div>		
+						</div>
+					</div>
+							
+					<ul>
+						<li data-toggle="collapse" data-target="#coiplo" aria-expanded="true" aria-controls="collapse">
+							<table>
+								<tr>
+									<td valign="top"><span class="lbn"></span></td>
+									<td>Certification of Inspection(COI/PLO)</td>
+								</tr>
+							</table>
+						</li>
+					</ul>
+								
+					<div style="margin-top: -30px; margin-bottom: -20px;" id="coiplo" class="collapse" aria-labelledby="heading" >
+						<div class="card-body">
+							<div id="accordionisi">
+								
+								<ul>
+									<li data-toggle="collapse" data-target="#nipoc21_accordion1" aria-expanded="true" aria-controls="collapse">
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Reference</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<div style="margin-top: -30px; margin-bottom: -20px;" id="nipoc21_accordion1" class="collapse" aria-labelledby="heading">
+									<div class="card-body">
+																
+										<ul>
+											<li>
+												<table>
+													<tr>
+														<td valign="top"><span class="lbn"></span></td>
+														<td>
+															<a class="all_ifr_bk" id="bk_KEPDIRTENGLING_MIGAS" onclick="tmp_ifr_sfpoc('_KEPDIRTENGLING_MIGAS',2,'KEPDIRTENGLING_MIGAS')">KEPDIRTENGLING MIGAS</a>
+															<a class="all_ifr" style="display: none;" id="ttp_KEPDIRTENGLING_MIGAS" onclick="tmp_ifr_sfpoc_close('_KEPDIRTENGLING_MIGAS',2,'KEPDIRTENGLING_MIGAS')">KEPDIRTENGLING MIGAS</a>
+														</td>
+													</tr>
+												</table>
+											</li>
+										</ul>
+																
+									</div>
+								</div>
+											
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Calculators</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Assessment</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+											
+								<ul>
+									<li>
+										<table>
+											<tr>
+												<td valign="top"><span class="lbn"></span></td>
+												<td>Last Report</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+										
+							</div>		
+						</div>
+					</div>
+							
+				</div>
+						
+			</div>
+						
+			
+		</td>
+		
+		<td valign="top" style="">
+			
+			<img class="all_ifr" id="homealive_samping_sidemenu" style="width:calc(100vw - 270px); height: 600px;" src="https://drive.google.com/thumbnail?id=1XbCBo6r4ez4k2g0pOaCORR-95bO-mWmr&sz=w1000">
+			
+			<div id="tmp_url_print" class="all_ifr" style="display: none; float: right;">
+				<a id="url_print" href="" target="_blank">
+					<img src="https://drive.google.com/thumbnail?id=1B3NWf05IkIaifnTa9g64mVGEJEDse3Tc&sz=w1000" style="margin: 0px 0px 10px 0px;">
+				</a>
+			</div>
+						
+			<div id="tmp_url_download" class="all_ifr" style="display: none; float: right;">
+				<a id="url_download" href="">
+					<img src="https://drive.google.com/thumbnail?id=1wHk7gUjP0XZwoY78aSvm_37P7VTj4aei&sz=w1000" style="margin: 0px -10px 10px 0px;">
+				</a>
+			</div>
+			
+			<div id="tmp_url_print2" class="all_ifr" style="display: none; float: right;">
+				<a id="url_print" onclick="javascript();">
+					<img src="https://drive.google.com/thumbnail?id=1B3NWf05IkIaifnTa9g64mVGEJEDse3Tc&sz=w1000" style="margin: 0px 0px 10px 0px;">
+				</a>
+			</div>
+						
+			<div id="tmp_url_download2" class="all_ifr" style="display: none; float: right;">
+				<a id="url_download"  onclick="javascript();">
+					<img src="https://drive.google.com/thumbnail?id=1wHk7gUjP0XZwoY78aSvm_37P7VTj4aei&sz=w1000" style="margin: 0px -10px 10px 0px;">
+				</a>
+			</div>
+			
+			<div class="all_ifr" id="ifr1" style="display: none; max-width: calc(100vw - 270px);">
+				<iframe id="iframetbl1" src="" style=""></iframe>
+			</div>
+			
+			<div class="all_ifr" id="ifr2" style="display: none; max-width: calc(100vw - 270px);">
+				<iframe id="iframetbl2" src=""></iframe>
+			</div>
+			
+			<div class="all_ifr" id="ifr3" style="display: none; max-width: calc(100vw - 270px);">
+				<div id="placeholder">
+					<iframe id="iframetbl3" src="" frameborder="0" scrolling="no"></iframe>
+				</div>
+			</div>
+			
+			<div class="all_ifr" id="ifr4" style="display: none; max-width: calc(100vw - 270px);">
+				<iframe id="iframetbl4" src="" frameborder="0" scrolling="no"></iframe>
+			</div>
+			
+			<div class="all_ifr" id="ifr5" style="display: none;">
+				<div id="placeholder_tbl5">
+					<iframe id="iframetbl5" src="" style=""></iframe>
+				</div>
+			</div>
+			
+		</td>
+	</tr>
+</table>
+
+<input id="prm_posisi_dd_area" type="hidden" value="" >
