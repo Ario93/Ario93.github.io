@@ -43,6 +43,11 @@ width: 100%;
     scrollbar-color: transparent transparent;
 }
 
+#ifr6 {
+    width: calc(100vw - 270px);
+    height: 720px;
+}
+
 #ifr3::-webkit-scrollbar {
     width: 8px;
     height: 8px;
@@ -105,6 +110,13 @@ width: 100%;
     height: 802px;
 	overflow: hidden;
     }
+
+#iframetbl6{
+	margin-top: -30px;
+	width: calc(100vw - 270px);
+    height: 720px;
+	transform: scale(0.95);
+}
 	
 </style>
 
@@ -309,6 +321,17 @@ width: 100%;
 														<td>
 															<a class="all_ifr_bk" id="bk_cpmonitoring" onclick="tmp_ifr_sfpoc('_cpmonitoring',3,'cpmonitoring')">Potential Pattern</a>
 															<a class="all_ifr" style="display: none;" id="ttp_cpmonitoring" onclick="tmp_ifr_sfpoc_close('_cpmonitoring',3,'cpmonitoring')"><b>Potential Pattern</b></a>
+														</td>
+													</tr>
+												</table>
+											</li>
+											<li>
+												<table>
+													<tr>
+														<td valign="top"><span class="lbn"></span></td>
+														<td>
+															<a class="all_ifr_bk" id="bk_asgcpmonitoring" onclick="tmp_ifr_sfpoc('_asgcpmonitoring',6,'asgcpmonitoring')">ASG Potential Pattern</a>
+															<a class="all_ifr" style="display: none;" id="ttp_asgcpmonitoring" onclick="tmp_ifr_sfpoc_close('_asgcpmonitoring',6,'asgcpmonitoring')"><b>ASG Potential Pattern</b></a>
 														</td>
 													</tr>
 												</table>
@@ -1688,6 +1711,10 @@ width: 100%;
 				<div id="placeholder_tbl5">
 					<iframe id="iframetbl5" src="" style=""></iframe>
 				</div>
+			</div>
+			
+			<div class="all_ifr" id="ifr6" style="display: none;">
+				<iframe id="iframetbl6" src="" style=""></iframe>
 			</div>
 			
 		</td>
