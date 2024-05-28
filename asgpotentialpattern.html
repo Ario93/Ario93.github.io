@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scrollable Div</title>
+<style>
+  #outer {
+    max-width: 100vw;
+    height: 700px; /* Tinggi untuk demonstrasi */
+    overflow-x: hidden;
+	transition: overflow 0.3s ease;
+  }
+  
+  #inner {
+    width: 2345px;
+    display: inline-block;
+  }
+  
+  #iframeauto1{
+    float: left;
+    margin-left: -0px;
+    left: 0;
+    transform: scale(1);
+    overflow: hidden;
+    top: 10%;
+    -ms-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+  }
+
+  #placeholder_auto1{
+    float: left;
+    height: 300px;
+    overflow: hidden;
+  }
+  
+  #inner2 {
+    width: 2345px;
+    display: inline-block;
+  }
+
+  #placeholder_tbl1{
+    float: left;
+    height: 400px;
+    overflow: hidden;
+  }
+  
+  .vertical-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 700px;
+    background-color: red;
+    pointer-events: none;
+  }
+  
+  #outer:hover {
+    overflow-x: auto;
+  }
+  
+   #outer::-webkit-scrollbar {
+    height: 5px;
+  }
+
+   #outer::-webkit-scrollbar-thumb {
+    background: #888; /* Warna thumb scrollbar */
+    border-radius: 10px; /* Membulatkan sudut thumb scrollbar */
+  }
+
+   #outer::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Warna thumb scrollbar saat hover */
+  }
+</style>
+</head>
+<body>
+<div id="outer" onscroll="checkScroll()">
+  <div id="inner">
+    
+  </div>
+  <br>
+  <div id="inner2">
+    
+  </div>
+
+</div>
+<div class="vertical-line" id="verticalLine"></div>
+<script>
+var link_iframe = {
+    satu: {
+        "1": "https://a360.co/3wBxpKU",
+        "2": "https://a360.co/4dHv8hG",
+        "3": "https://a360.co/3ydECky",
+        "4": "https://a360.co/4dDohWI",
+        "5": "https://a360.co/4ahqe8h",
+        "6": "https://a360.co/44GSosc",
+        "7": "https://a360.co/44ImyLv",
+        "8": "https://a360.co/3yfK5Ym",
+        "9": "https://a360.co/3UJhgLp",
+        "10": "https://a360.co/3UIXbom",
+        "11": "https://a360.co/3UWq1mD",
+        "12": "https://a360.co/3UDJKpH",
+        "13": "https://a360.co/3UWRvIS",
+        "14": "https://a360.co/3wBxD4I",
+        "15": "https://a360.co/3wHm5g3",
+        "16": "https://a360.co/3WFOhKZ",
+        "17": "https://a360.co/4amfhm2",
+        "18": "https://a360.co/4aj6eSO",
+        "19": "https://a360.co/44IxclN",
+        "20": "https://a360.co/3QEZibt",
+        "21": "https://a360.co/3wA16Ma",
+        "22": "https://a360.co/3UZaSAY",
+        "23": "https://a360.co/3JXE2Kq",
+        "24": "https://a360.co/3QIfeKh",
+        "25": "https://a360.co/3QKiPHJ",
+        "26": "https://a360.co/3JWPpT0",
+        "27": "https://a360.co/3V1q6pf",
+        "28": "https://a360.co/3wHm9wj",
+        "29": "https://a360.co/3QIN7KW",
+        "30": "https://a360.co/3UIXFea",
+        "31": "https://a360.co/3UIgcqY",
+        "32": "https://a360.co/3WFatVJ",
+        "33": "https://a360.co/3WF0FuA",
+        "34": "https://a360.co/3UNUvpM",
+        "35": "https://a360.co/3JZcjJh",
+        "36": "https://a360.co/3yma9Rx",
+        "37": "https://a360.co/3JZSlOB",
+        "38": "https://a360.co/3WHVjz2",
+        "39": "https://a360.co/4dCglVE",
+        "40": "https://a360.co/3K6VGeF",
+    },
+	dua:{
+		"1":"https://public.tableau.com/views/CP_POINT_AOJBB_LBM_BJN/Dashboard1?:embed=yes&:showVizHome=no&:tabs=no&:toolbar=no",
+		"2":"https://public.tableau.com/views/CP_POINT_AOJBB_LBM_BJN/Dashboard2?:embed=yes&:showVizHome=no&:tabs=no&:toolbar=no",
+		"3":"https://public.tableau.com/views/CP_POINT_AOJBB_LBM_BJN/Dashboard3?:embed=yes&:showVizHome=no&:tabs=no&:toolbar=no",
+		"4":"https://public.tableau.com/views/CP_POINT_AOJBB_LBM_BJN/Dashboard4?:embed=yes&:showVizHome=no&:tabs=no&:toolbar=no",
+		"5":"https://public.tableau.com/views/CP_POINT_AOJBB_LBM_BJN/Dashboard5?:embed=yes&:showVizHome=no&:tabs=no&:toolbar=no",
+		"6":"https://public.tableau.com/views/CP_POINT_AOJBB_LBM_BJN/Dashboard6?:embed=yes&:showVizHome=no&:tabs=no&:toolbar=no",
+		"7":"https://public.tableau.com/views/CP_POINT_AOJBB_LBM_BJN/Dashboard7?:embed=yes&:showVizHome=no&:tabs=no&:toolbar=no",
+		"8":"https://public.tableau.com/views/CP_POINT_AOJBB_LBM_BJN/Dashboard8?:embed=yes&:showVizHome=no&:tabs=no&:toolbar=no",
+		"9":"https://public.tableau.com/views/CP_POINT_AOJBB_LBM_BJN/Dashboard9?:embed=yes&:showVizHome=no&:tabs=no&:toolbar=no",
+		"10":"https://public.tableau.com/views/CP_POINT_AOJBB_LBM_BJN/Dashboard10?:embed=yes&:showVizHome=no&:tabs=no&:toolbar=no",
+		"11":"https://public.tableau.com/views/CP_POINT_AOJBB_LBM_BJN/Dashboard11?:embed=yes&:showVizHome=no&:tabs=no&:toolbar=no",
+		"12":"https://public.tableau.com/views/CP_POINT_AOJBB_LBM_BJN/Dashboard12?:embed=yes&:showVizHome=no&:tabs=no&:toolbar=no",
+		"13":"https://public.tableau.com/views/CP_POINT_AOJBB_LBM_BJN/Dashboard13?:embed=yes&:showVizHome=no&:tabs=no&:toolbar=no",
+		"14":"https://public.tableau.com/views/CP_POINT_AOJBB_LBM_BJN/Dashboard14?:embed=yes&:showVizHome=no&:tabs=no&:toolbar=no",
+		"15":"https://public.tableau.com/views/CP_POINT_AOJBB_LBM_BJN/Dashboard15?:embed=yes&:showVizHome=no&:tabs=no&:toolbar=no",
+		"16":"https://public.tableau.com/views/CP_POINT_AOJBB_LBM_BJN/Dashboard16?:embed=yes&:showVizHome=no&:tabs=no&:toolbar=no",
+		"17":"https://public.tableau.com/views/CP_POINT_AOJBB_LBM_BJN/Dashboard17?:embed=yes&:showVizHome=no&:tabs=no&:toolbar=no",
+		"18":"https://public.tableau.com/views/CP_POINT_AOJBB_LBM_BJN/Dashboard18?:embed=yes&:showVizHome=no&:tabs=no&:toolbar=no",
+		"19":"https://public.tableau.com/views/CP_POINT_AOJBB_LBM_BJN/Dashboard19?:embed=yes&:showVizHome=no&:tabs=no&:toolbar=no",
+		"20":"https://public.tableau.com/views/CP_POINT_AOJBB_LBM_BJN/Dashboard20?:embed=yes&:showVizHome=no&:tabs=no&:toolbar=no",
+		"21":"https://public.tableau.com/views/CP_POINT_AOJBB_LBM_BJN/Dashboard21?:embed=yes&:showVizHome=no&:tabs=no&:toolbar=no",
+		"22":"https://public.tableau.com/views/CP_POINT_AOJBB_LBM_BJN/Dashboard22?:embed=yes&:showVizHome=no&:tabs=no&:toolbar=no",
+		"23":"https://public.tableau.com/views/CP_POINT_AOJBB_LBM_BJN/Dashboard23?:embed=yes&:showVizHome=no&:tabs=no&:toolbar=no",
+		"24":"https://public.tableau.com/views/CP_POINT_AOJBB_LBM_BJN/Dashboard24?:embed=yes&:showVizHome=no&:tabs=no&:toolbar=no",
+		"25":"https://public.tableau.com/views/CP_POINT_AOJBB_LBM_BJN/Dashboard25?:embed=yes&:showVizHome=no&:tabs=no&:toolbar=no",
+		"26":"https://public.tableau.com/views/CP_POINT_AOJBB_LBM_BJN/Dashboard26?:embed=yes&:showVizHome=no&:tabs=no&:toolbar=no",
+		"27":"https://public.tableau.com/views/CP_POINT_AOJBB_LBM_BJN/Dashboard27?:embed=yes&:showVizHome=no&:tabs=no&:toolbar=no",
+		"28":"https://public.tableau.com/views/CP_POINT_AOJBB_LBM_BJN/Dashboard28?:embed=yes&:showVizHome=no&:tabs=no&:toolbar=no",
+		"29":"https://public.tableau.com/views/CP_POINT_AOJBB_LBM_BJN/Dashboard29?:embed=yes&:showVizHome=no&:tabs=no&:toolbar=no",
+		"30":"https://public.tableau.com/views/CP_POINT_AOJBB_LBM_BJN/Dashboard30?:embed=yes&:showVizHome=no&:tabs=no&:toolbar=no",
+		"31":"https://public.tableau.com/views/CP_POINT_AOJBB_LBM_BJN/Dashboard31?:embed=yes&:showVizHome=no&:tabs=no&:toolbar=no",
+		"32":"https://public.tableau.com/views/CP_POINT_AOJBB_LBM_BJN/Dashboard32?:embed=yes&:showVizHome=no&:tabs=no&:toolbar=no",
+		"33":"https://public.tableau.com/views/CP_POINT_AOJBB_LBM_BJN/Dashboard33?:embed=yes&:showVizHome=no&:tabs=no&:toolbar=no",
+		"34":"https://public.tableau.com/views/CP_POINT_AOJBB_LBM_BJN/Dashboard34?:embed=yes&:showVizHome=no&:tabs=no&:toolbar=no",
+		"35":"https://public.tableau.com/views/CP_POINT_AOJBB_LBM_BJN/Dashboard35?:embed=yes&:showVizHome=no&:tabs=no&:toolbar=no",
+		"36":"https://public.tableau.com/views/CP_POINT_AOJBB_LBM_BJN/Dashboard36?:embed=yes&:showVizHome=no&:tabs=no&:toolbar=no",
+		"37":"https://public.tableau.com/views/CP_POINT_AOJBB_LBM_BJN/Dashboard37?:embed=yes&:showVizHome=no&:tabs=no&:toolbar=no",
+		"38":"https://public.tableau.com/views/CP_POINT_AOJBB_LBM_BJN/Dashboard38?:embed=yes&:showVizHome=no&:tabs=no&:toolbar=no",
+		"39":"https://public.tableau.com/views/CP_POINT_AOJBB_LBM_BJN/Dashboard39?:embed=yes&:showVizHome=no&:tabs=no&:toolbar=no",
+		"40":"https://public.tableau.com/views/CP_POINT_AOJBB_LBM_BJN/Dashboard40?:embed=yes&:showVizHome=no&:tabs=no&:toolbar=no",
+
+	}
+};
+
+var count = 1;
+var awal = 1;
+
+function checkScroll() {
+  var outerDiv = document.getElementById("outer");
+  var verticalLine = document.getElementById('verticalLine');
+  var content = document.getElementById('content');
+  
+  var scrollLeft = outerDiv.scrollLeft;
+  var scrollWidth = outerDiv.scrollWidth;
+  var clientWidth = outerDiv.clientWidth;
+
+  var pos = (scrollLeft / (scrollWidth - clientWidth)) * clientWidth;
+
+  verticalLine.style.marginLeft = pos + 'px';
+  if (outerDiv.scrollLeft + outerDiv.clientWidth >= outerDiv.scrollWidth) {
+    if (count < 41) {
+	removeInitialFrames();
+	//document.getElementsByClassName("iframe-container").style.marginTop="100px";
+      addFrames();
+	  document.getElementById("outer").scrollLeft = 280;
+	  outerDiv.style.overflowX = 'hidden';
+	  setTimeout(function() {
+		outerDiv.style.overflowX = 'scroll';
+	  }, 3000);
+    }
+  }
+  
+  detectScrollLeft();
+  
+}
+
+function detectScrollLeft() {
+	
+  var outerDiv = document.getElementById("outer");
+  if (outerDiv.scrollLeft === 0) {
+    
+	if (count < 41 && count > 4) {
+	  count -= 4;
+	  removeFinalFrames();
+      addFrames2();
+	  document.getElementById("outer").scrollLeft = 280;
+	  outerDiv.style.overflowX = 'hidden';
+	  setTimeout(function() {
+		outerDiv.style.overflowX = 'scroll';
+	  }, 3000);
+    }
+	
+  }
+}
+
+function addFrames() {
+
+  var innerDiv = document.getElementById("inner");
+  var innerDiv2 = document.getElementById("inner2");
+  if(awal == 1){
+	innerDiv.removeChild(innerDiv.firstChild);
+	innerDiv2.removeChild(innerDiv2.firstChild);
+  }
+  //let elements = document.getElementsByClassName("iframe-container");
+//for (let i = 0; i < elements.length; i++) {
+    //elements[i].style.marginTop = "100px";
+	//alert(i);
+//}
+
+  //innerDiv.innerHTML="";
+  for (var i = 0; i < 2; i++) {
+    if (count > 40) break; // Keluar jika tidak ada URL lagi
+
+    var placeholder = document.createElement("div");
+    placeholder.id = "placeholder_auto1";
+    var iframeContainer = document.createElement("div");
+	//iframeContainer.className = "iframe-container";
+    if(count == 5){
+		iframeContainer.style.marginTop = "-542px";
+		iframeContainer.style.marginLeft = "-52px";
+		iframeContainer.innerHTML = '<iframe id="iframeauto1" style="width: 800px; height: 1300px; border: none;" src="'+link_iframe.satu[count]+'"></iframe>';
+	}else if(count == 4){
+		iframeContainer.style.marginTop = "-469px";
+		iframeContainer.style.marginLeft = "-52px";
+		iframeContainer.innerHTML = '<iframe id="iframeauto1" style="width: 800px; height: 1300px; border: none;" src="'+link_iframe.satu[count]+'"></iframe>';
+	}else if(count > 5 && count < 12){
+		iframeContainer.style.marginTop = "-558px";
+		iframeContainer.style.marginLeft = "-52px";
+		iframeContainer.innerHTML = '<iframe id="iframeauto1" style="width: 800px; height: 1300px; border: none;" src="'+link_iframe.satu[count]+'"></iframe>';
+	}else if(count == 12){
+		iframeContainer.style.marginTop = "-786px";
+		iframeContainer.style.marginLeft = "-52px";
+		placeholder.style.width="736px";
+		iframeContainer.innerHTML = '<iframe id="iframeauto1" style="width: 955px; height: 1755px; border: none;" src="'+link_iframe.satu[count]+'"></iframe>';
+		
+	}else if(count > 12 && count < 23){
+		iframeContainer.style.marginTop = "-561px";
+		iframeContainer.style.marginLeft = "-54px";
+		iframeContainer.innerHTML = '<iframe id="iframeauto1" style="width: 800px; height: 1300px; border: none;" src="'+link_iframe.satu[count]+'"></iframe>';
+	}else if(count == 23){
+		iframeContainer.style.marginTop = "-638px";
+		iframeContainer.style.marginLeft = "-54px";
+		iframeContainer.innerHTML = '<iframe id="iframeauto1" style="width: 800px; height: 1300px; border: none;" src="'+link_iframe.satu[count]+'"></iframe>';
+	}else if(count > 23 && count < 26){
+		iframeContainer.style.marginTop = "-561px";
+		iframeContainer.style.marginLeft = "-54px";
+		iframeContainer.innerHTML = '<iframe id="iframeauto1" style="width: 800px; height: 1300px; border: none;" src="'+link_iframe.satu[count]+'"></iframe>';
+	}else if(count == 26){
+		iframeContainer.style.marginTop = "-506px";
+		iframeContainer.style.marginLeft = "-54px";
+		iframeContainer.innerHTML = '<iframe id="iframeauto1" style="width: 800px; height: 1300px; border: none;" src="'+link_iframe.satu[count]+'"></iframe>';
+	}else if(count == 27){
+		placeholder.style.width = "780px";
+		iframeContainer.style.marginTop = "-1255px";
+		iframeContainer.style.marginLeft = "-610px";
+		iframeContainer.innerHTML = '<iframe id="iframeauto1" style="width: 2000px; height: 1700px; border: none;" src="'+link_iframe.satu[count]+'"></iframe>';
+	}else if(count == 28){
+		iframeContainer.style.marginTop = "-557px";
+		iframeContainer.style.marginLeft = "-54px";
+		iframeContainer.innerHTML = '<iframe id="iframeauto1" style="width: 800px; height: 1300px; border: none;" src="'+link_iframe.satu[count]+'"></iframe>';
+	}else if(count == 29){
+		iframeContainer.style.marginTop = "-551px";
+		iframeContainer.style.marginLeft = "-54px";
+		iframeContainer.innerHTML = '<iframe id="iframeauto1" style="width: 800px; height: 1300px; border: none;" src="'+link_iframe.satu[count]+'"></iframe>';
+	}else if(count == 30){
+		iframeContainer.style.marginTop = "-553px";
+		iframeContainer.style.marginLeft = "-54px";
+		iframeContainer.innerHTML = '<iframe id="iframeauto1" style="width: 800px; height: 1300px; border: none;" src="'+link_iframe.satu[count]+'"></iframe>';
+	}else if(count == 31){
+		iframeContainer.style.marginTop = "-547.5px";
+		iframeContainer.style.marginLeft = "-54px";
+		iframeContainer.innerHTML = '<iframe id="iframeauto1" style="width: 800px; height: 1300px; border: none;" src="'+link_iframe.satu[count]+'"></iframe>';
+	}else if(count == 32){
+		iframeContainer.style.marginTop = "-547.3px";
+		iframeContainer.style.marginLeft = "-54px";
+		iframeContainer.innerHTML = '<iframe id="iframeauto1" style="width: 800px; height: 1300px; border: none;" src="'+link_iframe.satu[count]+'"></iframe>';
+	}else if(count == 33 || count < 35){
+		iframeContainer.style.marginTop = "-545px";
+		iframeContainer.style.marginLeft = "-54px";
+		iframeContainer.innerHTML = '<iframe id="iframeauto1" style="width: 800px; height: 1300px; border: none;" src="'+link_iframe.satu[count]+'"></iframe>';
+	}else if(count == 35){
+		iframeContainer.style.marginTop = "-543px";
+		iframeContainer.style.marginLeft = "-54px";
+		iframeContainer.innerHTML = '<iframe id="iframeauto1" style="width: 800px; height: 1300px; border: none;" src="'+link_iframe.satu[count]+'"></iframe>';
+	}else if(count == 36){
+		iframeContainer.style.marginTop = "-615.8px";
+		iframeContainer.style.marginLeft = "-54px";
+		iframeContainer.innerHTML = '<iframe id="iframeauto1" style="width: 800px; height: 1300px; border: none;" src="'+link_iframe.satu[count]+'"></iframe>';
+	}else if(count > 36 && count < 39){
+		iframeContainer.style.marginTop = "-538px";
+		iframeContainer.style.marginLeft = "-54px";
+		iframeContainer.innerHTML = '<iframe id="iframeauto1" style="width: 800px; height: 1300px; border: none;" src="'+link_iframe.satu[count]+'"></iframe>';
+	}else if(count == 39){
+		iframeContainer.style.marginTop = "-531px";
+		iframeContainer.style.marginLeft = "-54px";
+		iframeContainer.innerHTML = '<iframe id="iframeauto1" style="width: 800px; height: 1300px; border: none;" src="'+link_iframe.satu[count]+'"></iframe>';
+	}else if(count == 40){
+		iframeContainer.style.marginTop = "-529.6px";
+		iframeContainer.style.marginLeft = "-54px";
+		iframeContainer.innerHTML = '<iframe id="iframeauto1" style="width: 800px; height: 1300px; border: none;" src="'+link_iframe.satu[count]+'"></iframe>';
+	}
+    
+    placeholder.appendChild(iframeContainer);
+    innerDiv.appendChild(placeholder);
+	
+	var placeholder2 = document.createElement("div");
+    placeholder2.id = "placeholder_tbl1";
+    var iframeContainer2 = document.createElement("div");
+	iframeContainer2.className = "iframe-container";
+    
+	
+	if(count == 4){
+		//placeholder2.style.border = "2px solid red";
+		placeholder2.style.width = "747px";
+		placeholder2.style.height = "370px";
+		placeholder2.style.marginLeft = "-0px";
+		iframeContainer2.style.marginTop = "0px";
+		iframeContainer2.style.marginLeft = "-13px";
+		iframeContainer2.innerHTML = '<iframe id="iframetbl1" style="width: 770px; height: 400px; border: none;" src="'+link_iframe.dua[count]+'"></iframe>';
+    }else if(count > 2){
+		placeholder2.style.width = "750px";
+		placeholder2.style.height = "370px";
+		placeholder2.style.marginLeft = "-0px";
+		iframeContainer2.style.marginTop = "0px";
+		iframeContainer2.style.marginLeft = "-13px";
+		iframeContainer2.innerHTML = '<iframe id="iframetbl1" style="width: 780px; height: 400px; border: none;" src="'+link_iframe.dua[count]+'"></iframe>';
+    }
+    
+	
+	
+    placeholder2.appendChild(iframeContainer2);
+    innerDiv2.appendChild(placeholder2);
+	
+	count++;
+	awal = 0;
+  }
+  //alert(count);
+}
+
+function addFrames2() {
+  var innerDiv = document.getElementById("inner");
+  var innerDiv2 = document.getElementById("inner2");
+  
+  for (var i = 0; i < 2; i++) {
+    if (count > 41) break; // Keluar jika tidak ada URL lagi
+	
+    var placeholder = document.createElement("div");
+    placeholder.id = "placeholder_auto1";
+    var iframeContainer = document.createElement("div");
+	//iframeContainer.className = "iframe-container";                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+	
+	if(count > 0 && count < 4){
+		iframeContainer.style.marginTop = "-469px";
+		iframeContainer.style.marginLeft = "-52px";
+		iframeContainer.innerHTML = '<iframe id="iframeauto1" style="width: 800px; height: 1300px; border: none;" src="'+link_iframe.satu[count]+'"></iframe>';
+	}else if(count == 5){
+		iframeContainer.style.marginTop = "-542px";
+		iframeContainer.style.marginLeft = "-52px";
+		iframeContainer.innerHTML = '<iframe id="iframeauto1" style="width: 800px; height: 1300px; border: none;" src="'+link_iframe.satu[count]+'"></iframe>';
+	}else if(count == 4){
+		iframeContainer.style.marginTop = "-469px";
+		iframeContainer.style.marginLeft = "-52px";
+		iframeContainer.innerHTML = '<iframe id="iframeauto1" style="width: 800px; height: 1300px; border: none;" src="'+link_iframe.satu[count]+'"></iframe>';
+	}else if(count > 5 && count < 12){
+		iframeContainer.style.marginTop = "-558px";
+		iframeContainer.style.marginLeft = "-52px";
+		iframeContainer.innerHTML = '<iframe id="iframeauto1" style="width: 800px; height: 1300px; border: none;" src="'+link_iframe.satu[count]+'"></iframe>';
+	}else if(count == 12){
+		iframeContainer.style.marginTop = "-786px";
+		iframeContainer.style.marginLeft = "-52px";
+		placeholder.style.width="736px";
+		iframeContainer.innerHTML = '<iframe id="iframeauto1" style="width: 955px; height: 1755px; border: none;" src="'+link_iframe.satu[count]+'"></iframe>';
+		
+	}else if(count > 12 && count < 23){
+		iframeContainer.style.marginTop = "-561px";
+		iframeContainer.style.marginLeft = "-54px";
+		iframeContainer.innerHTML = '<iframe id="iframeauto1" style="width: 800px; height: 1300px; border: none;" src="'+link_iframe.satu[count]+'"></iframe>';
+	}else if(count == 23){
+		iframeContainer.style.marginTop = "-638px";
+		iframeContainer.style.marginLeft = "-54px";
+		iframeContainer.innerHTML = '<iframe id="iframeauto1" style="width: 800px; height: 1300px; border: none;" src="'+link_iframe.satu[count]+'"></iframe>';
+	}else if(count > 23 && count < 26){
+		iframeContainer.style.marginTop = "-561px";
+		iframeContainer.style.marginLeft = "-54px";
+		iframeContainer.innerHTML = '<iframe id="iframeauto1" style="width: 800px; height: 1300px; border: none;" src="'+link_iframe.satu[count]+'"></iframe>';
+	}else if(count == 26){
+		iframeContainer.style.marginTop = "-506px";
+		iframeContainer.style.marginLeft = "-54px";
+		iframeContainer.innerHTML = '<iframe id="iframeauto1" style="width: 800px; height: 1300px; border: none;" src="'+link_iframe.satu[count]+'"></iframe>';
+	}else if(count == 27){
+		placeholder.style.width = "780px";
+		iframeContainer.style.marginTop = "-1255px";
+		iframeContainer.style.marginLeft = "-610px";
+		iframeContainer.innerHTML = '<iframe id="iframeauto1" style="width: 2000px; height: 1700px; border: none;" src="'+link_iframe.satu[count]+'"></iframe>';
+	}else if(count == 28){
+		iframeContainer.style.marginTop = "-557px";
+		iframeContainer.style.marginLeft = "-54px";
+		iframeContainer.innerHTML = '<iframe id="iframeauto1" style="width: 800px; height: 1300px; border: none;" src="'+link_iframe.satu[count]+'"></iframe>';
+	}else if(count == 29){
+		iframeContainer.style.marginTop = "-551px";
+		iframeContainer.style.marginLeft = "-54px";
+		iframeContainer.innerHTML = '<iframe id="iframeauto1" style="width: 800px; height: 1300px; border: none;" src="'+link_iframe.satu[count]+'"></iframe>';
+	}else if(count == 30){
+		iframeContainer.style.marginTop = "-553px";
+		iframeContainer.style.marginLeft = "-54px";
+		iframeContainer.innerHTML = '<iframe id="iframeauto1" style="width: 800px; height: 1300px; border: none;" src="'+link_iframe.satu[count]+'"></iframe>';
+	}else if(count == 31){
+		iframeContainer.style.marginTop = "-547.5px";
+		iframeContainer.style.marginLeft = "-54px";
+		iframeContainer.innerHTML = '<iframe id="iframeauto1" style="width: 800px; height: 1300px; border: none;" src="'+link_iframe.satu[count]+'"></iframe>';
+	}else if(count == 32){
+		iframeContainer.style.marginTop = "-547.3px";
+		iframeContainer.style.marginLeft = "-54px";
+		iframeContainer.innerHTML = '<iframe id="iframeauto1" style="width: 800px; height: 1300px; border: none;" src="'+link_iframe.satu[count]+'"></iframe>';
+	}else if(count == 33 || count < 35){
+		iframeContainer.style.marginTop = "-545px";
+		iframeContainer.style.marginLeft = "-54px";
+		iframeContainer.innerHTML = '<iframe id="iframeauto1" style="width: 800px; height: 1300px; border: none;" src="'+link_iframe.satu[count]+'"></iframe>';
+	}else if(count == 35){
+		iframeContainer.style.marginTop = "-543px";
+		iframeContainer.style.marginLeft = "-54px";
+		iframeContainer.innerHTML = '<iframe id="iframeauto1" style="width: 800px; height: 1300px; border: none;" src="'+link_iframe.satu[count]+'"></iframe>';
+	}else if(count == 36){
+		iframeContainer.style.marginTop = "-615.8px";
+		iframeContainer.style.marginLeft = "-54px";
+		iframeContainer.innerHTML = '<iframe id="iframeauto1" style="width: 800px; height: 1300px; border: none;" src="'+link_iframe.satu[count]+'"></iframe>';
+	}else if(count > 36 && count < 39){
+		iframeContainer.style.marginTop = "-538px";
+		iframeContainer.style.marginLeft = "-54px";
+		iframeContainer.innerHTML = '<iframe id="iframeauto1" style="width: 800px; height: 1300px; border: none;" src="'+link_iframe.satu[count]+'"></iframe>';
+	}else if(count == 39){
+		iframeContainer.style.marginTop = "-531px";
+		iframeContainer.style.marginLeft = "-54px";
+		iframeContainer.innerHTML = '<iframe id="iframeauto1" style="width: 800px; height: 1300px; border: none;" src="'+link_iframe.satu[count]+'"></iframe>';
+	}else if(count == 40){
+		iframeContainer.style.marginTop = "-529.6px";
+		iframeContainer.style.marginLeft = "-54px";
+		iframeContainer.innerHTML = '<iframe id="iframeauto1" style="width: 800px; height: 1300px; border: none;" src="'+link_iframe.satu[count]+'"></iframe>';
+	}
+    
+    placeholder.appendChild(iframeContainer);
+    innerDiv.insertBefore(placeholder, innerDiv.firstChild);
+	
+	var placeholder2 = document.createElement("div");
+    placeholder2.id = "placeholder_tbl1";
+    var iframeContainer2 = document.createElement("div");
+	iframeContainer2.className = "iframe-container";
+    if(count == 1){
+		placeholder2.style.width = "743px";
+		placeholder2.style.height = "370px";
+		iframeContainer2.style.marginTop = "0px";
+		iframeContainer2.style.marginLeft = "-10px";
+		iframeContainer2.innerHTML = '<iframe id="iframetbl1" style="width: 765px; height: 400px; border: none;" src="'+link_iframe.dua[count]+'"></iframe>';
+    }else if(count == 2){
+		placeholder2.style.width = "749px";
+		placeholder2.style.height = "370px";
+		placeholder2.style.marginLeft = "-0px";
+		iframeContainer2.style.marginTop = "0px";
+		iframeContainer2.style.marginLeft = "-20px";
+		iframeContainer2.innerHTML = '<iframe id="iframetbl1" style="width: 785px; height: 400px; border: none;" src="'+link_iframe.dua[count]+'"></iframe>';
+    }else if(count == 3){
+		placeholder2.style.width = "750px";
+		placeholder2.style.height = "370px";
+		placeholder2.style.marginLeft = "-0px";
+		iframeContainer2.style.marginTop = "0px";
+		iframeContainer2.style.marginLeft = "-10px";
+		iframeContainer2.innerHTML = '<iframe id="iframetbl1" style="width: 780px; height: 400px; border: none;" src="'+link_iframe.dua[count]+'"></iframe>';
+    }else if(count == 4){
+		//placeholder2.style.border = "2px solid red";
+		placeholder2.style.width = "747px";
+		placeholder2.style.height = "370px";
+		placeholder2.style.marginLeft = "-0px";
+		iframeContainer2.style.marginTop = "0px";
+		iframeContainer2.style.marginLeft = "-13px";
+		iframeContainer2.innerHTML = '<iframe id="iframetbl1" style="width: 770px; height: 400px; border: none;" src="'+link_iframe.dua[count]+'"></iframe>';
+    }else if(count > 2){
+		placeholder2.style.width = "750px";
+		placeholder2.style.height = "370px";
+		placeholder2.style.marginLeft = "-0px";
+		iframeContainer2.style.marginTop = "0px";
+		iframeContainer2.style.marginLeft = "-13px";
+		iframeContainer2.innerHTML = '<iframe id="iframetbl1" style="width: 780px; height: 400px; border: none;" src="'+link_iframe.dua[count]+'"></iframe>';
+    }
+	
+	
+    placeholder2.appendChild(iframeContainer2);
+    innerDiv2.insertBefore(placeholder2, innerDiv2.firstChild);
+	//alert(count);
+    count--;
+	
+  }
+  
+  if(count == 0){
+	 count+=4;
+	}else{
+  count+=4;
+  }
+  
+  //alert(count);
+}
+
+function removeInitialFrames() {
+  var innerDiv = document.getElementById("inner");
+  var innerDiv2 = document.getElementById("inner2");
+  for (var i = 0; i < 2; i++) {
+    if (innerDiv.firstChild) {
+      innerDiv.removeChild(innerDiv.firstChild);
+    }
+    
+  }
+  for (var i = 0; i < 2; i++) {
+    if (innerDiv2.firstChild) {
+      innerDiv2.removeChild(innerDiv2.firstChild);
+    }
+    
+  }
+}
+
+function removeFinalFrames() {
+  var innerDiv = document.getElementById("inner");
+  var innerDiv2 = document.getElementById("inner2");
+  for (var i = 0; i < 2; i++) {
+    if (innerDiv.lastChild) {
+      innerDiv.removeChild(innerDiv.lastChild);
+    }
+  }
+  for (var i = 0; i < 2; i++) {
+    if (innerDiv2.lastChild) {
+      innerDiv2.removeChild(innerDiv2.lastChild);
+    }
+  }
+}
+
+addFramesawal();
+function addFramesawal() {
+  var innerDiv = document.getElementById("inner");
+  var innerDiv2 = document.getElementById("inner2");
+  for (var i = 0; i < 3; i++) {
+    if (count > 41) break;
+
+    var placeholder = document.createElement("div");
+    placeholder.id = "placeholder_auto1";
+    var iframeContainer = document.createElement("div");
+	//iframeContainer.className = "iframe-container";
+	iframeContainer.style.marginTop = "-469px";
+	iframeContainer.style.marginLeft = "-52px";
+	
+	iframeContainer.innerHTML = '<iframe id="iframeauto1" style="width: 800px; height: 1300px; border: none;" src="'+link_iframe.satu[count]+'"></iframe>';
+    placeholder.appendChild(iframeContainer);
+    innerDiv.appendChild(placeholder);
+	
+	var placeholder2 = document.createElement("div");
+    placeholder2.id = "placeholder_tbl1";
+    var iframeContainer2 = document.createElement("div");
+	iframeContainer2.className = "iframe-container";
+    
+	if(count == 1){
+		placeholder2.style.width = "743px";
+		placeholder2.style.height = "370px";
+		iframeContainer2.style.marginTop = "0px";
+		iframeContainer2.style.marginLeft = "-10px";
+		iframeContainer2.innerHTML = '<iframe id="iframetbl1" style="width: 765px; height: 400px; border: none;" src="'+link_iframe.dua[count]+'"></iframe>';
+    }else if(count == 2){
+		placeholder2.style.width = "749px";
+		placeholder2.style.height = "370px";
+		placeholder2.style.marginLeft = "-0px";
+		iframeContainer2.style.marginTop = "0px";
+		iframeContainer2.style.marginLeft = "-20px";
+		iframeContainer2.innerHTML = '<iframe id="iframetbl1" style="width: 785px; height: 400px; border: none;" src="'+link_iframe.dua[count]+'"></iframe>';
+    }else if(count == 3){
+		placeholder2.style.width = "750px";
+		placeholder2.style.height = "370px";
+		placeholder2.style.marginLeft = "-0px";
+		iframeContainer2.style.marginTop = "0px";
+		iframeContainer2.style.marginLeft = "-10px";
+		iframeContainer2.innerHTML = '<iframe id="iframetbl1" style="width: 780px; height: 400px; border: none;" src="'+link_iframe.dua[count]+'"></iframe>';
+    }
+	
+	
+    placeholder2.appendChild(iframeContainer2);
+    innerDiv2.appendChild(placeholder2);
+	
+    count++;
+  }
+  //count += 19;
+}
+//innerDiv.style.width = (innerDiv.scrollWidth + 2400) + "px";
+</script>
+</body>
+</html>
