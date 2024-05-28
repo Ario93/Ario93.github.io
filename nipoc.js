@@ -15,6 +15,9 @@ var ifr1 = {
 	"aligmentsheet": {
 		"preview": "https://a360.co/4bcisxW",
 	},
+	"asgcpmonitoring": {
+		"preview": "https://ario93.github.io/asgpotentialpattern.html",
+	},
     
 };
 
@@ -81,6 +84,11 @@ function tmp_ifr_sfpoc(idbkttp,ifr,prm_isi){
 		document.getElementById('tmp_url_download2').style.display="block";
 	
 	}else if(ifr == 5){
+		
+		document.getElementById('iframetbl'+ifr).src = ifr1[prm_isi].preview;
+		document.getElementById('tmp_url_print2').style.display="block";
+		document.getElementById('tmp_url_download2').style.display="block";
+	}else if(ifr == 6){
 		
 		document.getElementById('iframetbl'+ifr).src = ifr1[prm_isi].preview;
 		document.getElementById('tmp_url_print2').style.display="block";
