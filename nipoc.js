@@ -2,6 +2,7 @@ $('#subsidiary').chosen({ width: '200px', height: '80px'}).css('background', 'wh
 $('#stasiun').chosen({ width: '200px', height: '80px'});
 $('#kp_point').chosen({ width: '200px', height: '80px'});
 $('#visual_rov').chosen({ width: '350px', height: '80px'});
+$('#jalur').chosen({ width: '200px', height: '80px'});
 
 var ifr1 = {
     "ffs": {
@@ -299,6 +300,27 @@ var stasiunData = {
 	
 };
 
+var jalurData = {
+
+	AOL: {
+		"All":"https://public.tableau.com/views/Cp_Point_AOL2Fase/Dashboard1?:embed=yes&:showVizHome=no&:tabs=no&:toolbar=no",
+        "Belitang-LBM PH1": "https://public.tableau.com/views/Cp_Point_AOL_Belitang-LBMPH1/Dashboard1?:embed=yes&:showVizHome=no&:tabs=no&:toolbar=no",
+        "Belitang-LBM PH2": "https://public.tableau.com/views/Cp_Point_AOL_Belitang-LBMPH2/Dashboard1?:embed=yes&:showVizHome=no&:tabs=no&:toolbar=no",
+    },
+	AOSS: {
+		"All":"https://public.tableau.com/views/cp_point_AOSS3Fase/Dashboard1?:embed=yes&:showVizHome=no&:tabs=no&:toolbar=no",
+        "GRS - PGD": "https://public.tableau.com/views/cp_point_AOSS3_GRS-PGD/Dashboard1?:embed=yes&:showVizHome=no&:tabs=no&:toolbar=no",
+        "PGD - BELITANG (PH 1)": "https://public.tableau.com/views/cp_point_AOSS3_PGD-BELITANGPH1/Dashboard1?:embed=yes&:showVizHome=no&:tabs=no&:toolbar=no",
+        "PGD - BELITANG (PH 2)": "https://public.tableau.com/views/cp_point_AOSS3_PGD-BELITANGPH2/Dashboard1?:embed=yes&:showVizHome=no&:tabs=no&:toolbar=no",
+    },
+	AOJBB: {
+		"All":"https://public.tableau.com/views/cp_point_AOJBB2Fase/Dashboard1?:embed=yes&:showVizHome=no&:tabs=no&:toolbar=no",
+		"LBM - BJN":"https://public.tableau.com/views/cp_point_AOJBB-LBM-MBK_2024/Dashboard1?:embed=yes&:showVizHome=no&:tabs=no&:toolbar=no",
+		"LBM - MBK":"https://public.tableau.com/views/cp_point_AOJBB-LBM-BJN_2024/Dashboard2?:embed=yes&:showVizHome=no&:tabs=no&:toolbar=no",
+    },
+	
+};
+
 var subsidiaryDropdown = document.getElementById('subsidiary');
 var stasiunDropdown = document.getElementById('stasiun');
 
@@ -381,21 +403,43 @@ var data_kp_point = {
 };
 
 var kp_pointDropdown = document.getElementById('kp_point');
+var jalurdataDropdown = document.getElementById('jalur');
 
 $("#stasiun").chosen().change(function(){
     var selectedStasiun = $(this).val();
     kp_pointDropdown.innerHTML = '<option value="">KP Point</option>';
-
+	jalurdataDropdown.innerHTML = '<option value="">Jalur</option>';
+	
 	var prm_posisi = document.getElementById('prm_posisi_dd_area').value;
 	if(prm_posisi === "cpmonitoring"){
 		
-		if(selectedStasiun == "AOL"){
-			document.getElementById('iframetbl3').src="https://public.tableau.com/views/Cp_Point_AOL2Fase/Dashboard1?:embed=yes&:showVizHome=no&:tabs=no&:toolbar=no";
-		}else if(selectedStasiun == "AOSS"){
-			document.getElementById('iframetbl3').src="https://public.tableau.com/views/cp_point_AOSS3Fase/Dashboard1?:embed=yes&:showVizHome=no&:tabs=no&:toolbar=no";
-		}else if(selectedStasiun == "AOJBB"){
-			document.getElementById('iframetbl3').src="https://public.tableau.com/views/cp_point_AOJBB2Fase/Dashboard1?:embed=yes&:showVizHome=no&:tabs=no&:toolbar=no";
+        
+		if (selectedStasiun) {
+			
+			if(selectedStasiun == "AOL"){
+				document.getElementById('iframetbl3').src="https://public.tableau.com/views/Cp_Point_AOL2Fase/Dashboard1?:embed=yes&:showVizHome=no&:tabs=no&:toolbar=no";
+			}else if(selectedStasiun == "AOSS"){
+				document.getElementById('iframetbl3').src="https://public.tableau.com/views/cp_point_AOSS3Fase/Dashboard1?:embed=yes&:showVizHome=no&:tabs=no&:toolbar=no";
+			}else if(selectedStasiun == "AOJBB"){
+				document.getElementById('iframetbl3').src="https://public.tableau.com/views/cp_point_AOJBB2Fase/Dashboard1?:embed=yes&:showVizHome=no&:tabs=no&:toolbar=no";
+			}
+			
+			var jalurdatas = jalurData[selectedStasiun];
+			for (var key in jalurdatas) {
+				var option = document.createElement('option');
+				option.value = jalurdatas[key];
+				option.text = key;
+				jalurdataDropdown.appendChild(option);
+			}
+			jalurdataDropdown.disabled = false;
+			
+		} else {
+		
+			jalurdataDropdown.disabled = true;
+			
 		}
+		
+		$('#jalur').trigger('chosen:updated');
 	
 	}else if(prm_posisi === "aligmentsheet"){
 		if (selectedStasiun) {
@@ -423,6 +467,14 @@ $("#kp_point").chosen().change(function(){
 
     var selectedStasiun = $(this).val();
 	document.getElementById('iframetbl5').src=selectedStasiun;
+	
+    
+});
+
+$("#jalur").chosen().change(function(){
+
+    var selectedjalur = $(this).val();
+	document.getElementById('iframetbl3').src=selectedjalur;
 	
     
 });
