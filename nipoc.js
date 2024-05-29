@@ -46,23 +46,23 @@ var ifr2 = {
 
 var ifr3 = {
 	"20211016_092822_CH1_MERLINWR200P309": {
-		"preview":"https://www.youtube.com/embed/9856RA0cut0?autoplay=1&enablejsapi=1&rel=0;modestbranding=1&showsearch=0",
+		"preview":"https://www.youtube.com/embed/9856RA0cut0?autoplay=1&enablejsapi=1&rel=0&modestbranding=1&showsearch=0&loop=1&playlist=hNvqJ8lrHHc",
 	},
 
 	"20211016_085802_CH1_MERLINWR200P309": {
-		"preview":"https://www.youtube.com/embed/0oNB0kSzL-w?autoplay=1&enablejsapi=1&rel=0;modestbranding=1&showsearch=0",
+		"preview":"https://www.youtube.com/embed/0oNB0kSzL-w?autoplay=1&enablejsapi=1&rel=0&modestbranding=1&showsearch=0&loop=1&playlist=hNvqJ8lrHHc",
 	},
 
 	"20211019_042834_CH1_MERLINWR200P309": {
-		"preview":"https://www.youtube.com/embed/iyjdDVpouZI?autoplay=1&enablejsapi=1&rel=0;modestbranding=1&showsearch=0",
+		"preview":"https://www.youtube.com/embed/iyjdDVpouZI?autoplay=1&enablejsapi=1&rel=0&modestbranding=1&showsearch=0&loop=1&playlist=hNvqJ8lrHHc",
 	},
 
 	"20211019_030655_CH1_MERLINWR200P309": {
-		"preview":"https://www.youtube.com/embed/TsH_A_OQ_Uo?autoplay=1&enablejsapi=1&rel=0;modestbranding=1&showsearch=0",
+		"preview":"https://www.youtube.com/embed/TsH_A_OQ_Uo?autoplay=1&enablejsapi=1&rel=0&modestbranding=1&showsearch=0&loop=1&playlist=hNvqJ8lrHHc",
 	},
 
 	"20211020_061513_CH1_MERLINWR200P309": {
-		"preview":"https://www.youtube.com/embed/hNvqJ8lrHHc?autoplay=1&enablejsapi=1&rel=0;modestbranding=1&showsearch=0",
+		"preview":"https://www.youtube.com/embed/hNvqJ8lrHHc?autoplay=1&enablejsapi=1&rel=0&modestbranding=1&showsearch=0&loop=1&playlist=hNvqJ8lrHHc",
 	},
 };
 
