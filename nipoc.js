@@ -1,6 +1,7 @@
 $('#subsidiary').chosen({ width: '200px', height: '80px'}).css('background', 'white');
 $('#stasiun').chosen({ width: '200px', height: '80px'});
 $('#kp_point').chosen({ width: '200px', height: '80px'});
+$('#visual_rov').chosen({ width: '350px', height: '80px'});
 
 var ifr1 = {
     "ffs": {
@@ -45,25 +46,133 @@ var ifr2 = {
 };
 
 var ifr3 = {
-	"20211016_092822_CH1_MERLINWR200P309": {
-		"preview":"https://www.youtube.com/embed/9856RA0cut0?autoplay=1&enablejsapi=1&rel=0&modestbranding=1&showsearch=0&loop=1&playlist=hNvqJ8lrHHc",
-	},
-
-	"20211016_085802_CH1_MERLINWR200P309": {
-		"preview":"https://www.youtube.com/embed/0oNB0kSzL-w?autoplay=1&enablejsapi=1&rel=0&modestbranding=1&showsearch=0&loop=1&playlist=hNvqJ8lrHHc",
-	},
-
-	"20211019_042834_CH1_MERLINWR200P309": {
-		"preview":"https://www.youtube.com/embed/iyjdDVpouZI?autoplay=1&enablejsapi=1&rel=0&modestbranding=1&showsearch=0&loop=1&playlist=hNvqJ8lrHHc",
-	},
-
-	"20211019_030655_CH1_MERLINWR200P309": {
-		"preview":"https://www.youtube.com/embed/TsH_A_OQ_Uo?autoplay=1&enablejsapi=1&rel=0&modestbranding=1&showsearch=0&loop=1&playlist=hNvqJ8lrHHc",
-	},
-
-	"20211020_061513_CH1_MERLINWR200P309": {
-		"preview":"https://www.youtube.com/embed/hNvqJ8lrHHc?autoplay=1&enablejsapi=1&rel=0&modestbranding=1&showsearch=0&loop=1&playlist=hNvqJ8lrHHc",
-	},
+	
+	"20211016 092822 CH1 MERLINWR200P309": {
+        "preview": "https://www.youtube.com/embed/9856RA0cut0?autoplay=1&enablejsapi=1&rel=0&modestbranding=1&showsearch=0&loop=1&playlist=9856RA0cut0",
+    },
+    "20211016 085802 CH1 MERLINWR200P309": {
+        "preview": "https://www.youtube.com/embed/0oNB0kSzL-w?autoplay=1&enablejsapi=1&rel=0&modestbranding=1&showsearch=0&loop=1&playlist=0oNB0kSzL-w",
+    },
+    "20211019 042834 CH1 MERLINWR200P309": {
+        "preview": "https://www.youtube.com/embed/iyjdDVpouZI?autoplay=1&enablejsapi=1&rel=0&modestbranding=1&showsearch=0&loop=1&playlist=iyjdDVpouZI",
+    },
+    "20211019 030655 CH1 MERLINWR200P309": {
+        "preview": "https://www.youtube.com/embed/TsH_A_OQ_Uo?autoplay=1&enablejsapi=1&rel=0&modestbranding=1&showsearch=0&loop=1&playlist=TsH_A_OQ_Uo",
+    },
+    "20211020 061513 CH1 MERLINWR200P309": {
+        "preview": "https://www.youtube.com/embed/hNvqJ8lrHHc?autoplay=1&enablejsapi=1&rel=0&modestbranding=1&showsearch=0&loop=1&playlist=hNvqJ8lrHHc",
+    },
+	"20211020 101858 CH1 MERLINWR200P309": {
+        "preview": "https://www.youtube.com/embed/rbgHoe7FdJA?autoplay=1&enablejsapi=1&rel=0&modestbranding=1&showsearch=0&loop=1&playlist=rbgHoe7FdJA",
+    },
+	"20211020 141900 CH1 MERLINWR200P309": {
+        "preview": "https://www.youtube.com/embed/BqeHewFgPkA?autoplay=1&enablejsapi=1&rel=0&modestbranding=1&showsearch=0&loop=1&playlist=BqeHewFgPkA",
+    },
+	"20211020 121859 CH1 MERLINWR200P309": {
+        "preview": "https://www.youtube.com/embed/wTAvGgIAcNQ?autoplay=1&enablejsapi=1&rel=0&modestbranding=1&showsearch=0&loop=1&playlist=wTAvGgIAcNQ",
+    },
+	"20211020 181900 CH1 MERLINWR200P309": {
+        "preview": "https://www.youtube.com/embed/iPudQbUr3XM?autoplay=1&enablejsapi=1&rel=0&modestbranding=1&showsearch=0&loop=1&playlist=iPudQbUr3XM",
+    },
+	"20211020 161900 CH1 MERLINWR200P309": {
+        "preview": "https://www.youtube.com/embed/3NHbb5Z-UTg?autoplay=1&enablejsapi=1&rel=0&modestbranding=1&showsearch=0&loop=1&playlist=3NHbb5Z-UTg",
+    },
+	//"20211020 201900 CH1 MERLINWR200P309": {
+        //"preview": "https://www.youtube.com/embed/hiPn16Qh580?autoplay=1&enablejsapi=1&rel=0&modestbranding=1&showsearch=0&loop=1&playlist=hiPn16Qh580",
+    //},
+	"20211020 221900 CH1 MERLINWR200P309": {
+        "preview": "https://www.youtube.com/embed/zaFgw9bi8Q8?autoplay=1&enablejsapi=1&rel=0&modestbranding=1&showsearch=0&loop=1&playlist=zaFgw9bi8Q8",
+    },
+	"20211021 041900 CH1 MERLINWR200P309": {
+        "preview": "https://www.youtube.com/embed/BVbs1taItMw?autoplay=1&enablejsapi=1&rel=0&modestbranding=1&showsearch=0&loop=1&playlist=BVbs1taItMw",
+    },
+	"20211021 061900 CH1 MERLINWR200P309": {
+        "preview": "https://www.youtube.com/embed/RksgdHHEIxg?autoplay=1&enablejsapi=1&rel=0&modestbranding=1&showsearch=0&loop=1&playlist=RksgdHHEIxg",
+    },
+	"20211021 094109 CH1 MERLINWR200P309": {
+        "preview": "https://www.youtube.com/embed/bPtBq5a3FPQ?autoplay=1&enablejsapi=1&rel=0&modestbranding=1&showsearch=0&loop=1&playlist=bPtBq5a3FPQ",
+    },
+	"20211021 001901 CH1 MERLINWR200P309": {
+        "preview": "https://www.youtube.com/embed/JJGH6F4O-Mw?autoplay=1&enablejsapi=1&rel=0&modestbranding=1&showsearch=0&loop=1&playlist=JJGH6F4O-Mw",
+    },
+	"20211021 021900 CH1 MERLINWR200P309": {
+        "preview": "https://www.youtube.com/embed/-mI36gK-dzQ?autoplay=1&enablejsapi=1&rel=0&modestbranding=1&showsearch=0&loop=1&playlist=-mI36gK-dzQ",
+    },
+	"20211021 145900 CH1 MERLINWR200P309": {
+        "preview": "https://www.youtube.com/embed/_wx9wD6vYyo?autoplay=1&enablejsapi=1&rel=0&modestbranding=1&showsearch=0&loop=1&playlist=_wx9wD6vYyo",
+    },
+	"20211021 165900 CH1 MERLINWR200P309": {
+        "preview": "https://www.youtube.com/embed/LGiXfhzso9k?autoplay=1&enablejsapi=1&rel=0&modestbranding=1&showsearch=0&loop=1&playlist=LGiXfhzso9k",
+    },
+	"20211021 185901 CH1 MERLINWR200P309": {
+        "preview": "https://www.youtube.com/embed/PEviWe5JQsY?autoplay=1&enablejsapi=1&rel=0&modestbranding=1&showsearch=0&loop=1&playlist=PEviWe5JQsY",
+    },
+	"20211021 114110 CH1 MERLINWR200P309": {
+        "preview": "https://www.youtube.com/embed/ZKK5mcame3U?autoplay=1&enablejsapi=1&rel=0&modestbranding=1&showsearch=0&loop=1&playlist=ZKK5mcame3U",
+    },
+	"20211021 125859 CH1 MERLINWR200P309": {
+        "preview": "https://www.youtube.com/embed/T7ViWbcpIQQ?autoplay=1&enablejsapi=1&rel=0&modestbranding=1&showsearch=0&loop=1&playlist=T7ViWbcpIQQ",
+    },
+	"20211021 193304 CH1 MERLINWR200P309": {
+        "preview": "https://www.youtube.com/embed/QuFuKSUsJf4?autoplay=1&enablejsapi=1&rel=0&modestbranding=1&showsearch=0&loop=1&playlist=QuFuKSUsJf4",
+    },
+	"20211022 114127 CH1 MERLINWR200P309": {
+        "preview": "https://www.youtube.com/embed/MBPB0w9IFLU?autoplay=1&enablejsapi=1&rel=0&modestbranding=1&showsearch=0&loop=1&playlist=MBPB0w9IFLU",
+    },
+	"20211021 213306 CH1 MERLINWR200P309": {
+        "preview": "https://www.youtube.com/embed/zkB5SK8Oiko?autoplay=1&enablejsapi=1&rel=0&modestbranding=1&showsearch=0&loop=1&playlist=zkB5SK8Oiko",
+    },
+	"20211022 013306 CH1 MERLINWR200P309": {
+        "preview": "https://www.youtube.com/embed/8Ywx2P6_3xc?autoplay=1&enablejsapi=1&rel=0&modestbranding=1&showsearch=0&loop=1&playlist=8Ywx2P6_3xc",
+    },
+	"20211022 033307 CH1 MERLINWR200P309": {
+        "preview": "https://www.youtube.com/embed/6XBygcfNN4E?autoplay=1&enablejsapi=1&rel=0&modestbranding=1&showsearch=0&loop=1&playlist=6XBygcfNN4E",
+    },
+	"20211021 233306 CH1 MERLINWR200P309": {
+        "preview": "https://www.youtube.com/embed/ibiZgNMEWg8?autoplay=1&enablejsapi=1&rel=0&modestbranding=1&showsearch=0&loop=1&playlist=ibiZgNMEWg8",
+    },
+	"20211022 084359 CH1 MERLINWR200P309": {
+        "preview": "https://www.youtube.com/embed/WbZFavc-sSo?autoplay=1&enablejsapi=1&rel=0&modestbranding=1&showsearch=0&loop=1&playlist=WbZFavc-sSo",
+    },
+	"20211022 100031 CH1 MERLINWR200P309": {
+        "preview": "https://www.youtube.com/embed/Ar-xr0ttkgQ?autoplay=1&enablejsapi=1&rel=0&modestbranding=1&showsearch=0&loop=1&playlist=Ar-xr0ttkgQ",
+    },
+	"20211022 053308 CH1 MERLINWR200P309": {
+        "preview": "https://www.youtube.com/embed/hBzgyelcYdM?autoplay=1&enablejsapi=1&rel=0&modestbranding=1&showsearch=0&loop=1&playlist=hBzgyelcYdM",
+    },
+	"20211022 195841 CH1 MERLINWR200P309": {
+        "preview": "https://www.youtube.com/embed/_UIfk0mwYB8?autoplay=1&enablejsapi=1&rel=0&modestbranding=1&showsearch=0&loop=1&playlist=_UIfk0mwYB8",
+    },
+	"20211022 134128 CH1 MERLINWR200P309": {
+        "preview": "https://www.youtube.com/embed/BkDJuukn_Ew?autoplay=1&enablejsapi=1&rel=0&modestbranding=1&showsearch=0&loop=1&playlist=BkDJuukn_Ew",
+    },
+	"20211023 051226 CH1 MERLINWR200P309": {
+        "preview": "https://www.youtube.com/embed/TOZEf0n-HBw?autoplay=1&enablejsapi=1&rel=0&modestbranding=1&showsearch=0&loop=1&playlist=TOZEf0n-HBw",
+    },
+	"20211023 071228 CH1 MERLINWR200P309": {
+        "preview": "https://www.youtube.com/embed/A_GmayjTsBY?autoplay=1&enablejsapi=1&rel=0&modestbranding=1&showsearch=0&loop=1&playlist=A_GmayjTsBY",
+    },
+	"20211023 111228 CH1 MERLINWR200P309": {
+        "preview": "https://www.youtube.com/embed/rbhBQG53M1k?autoplay=1&enablejsapi=1&rel=0&modestbranding=1&showsearch=0&loop=1&playlist=rbhBQG53M1k",
+    },
+	"20211022 154128 CH1 MERLINWR200P309": {
+        "preview": "https://www.youtube.com/embed/ahEEfdxEQKo?autoplay=1&enablejsapi=1&rel=0&modestbranding=1&showsearch=0&loop=1&playlist=ahEEfdxEQKo",
+    },
+	"20211022 215843 CH1 MERLINWR200P309": {
+        "preview": "https://www.youtube.com/embed/UzTjuWlwq84?autoplay=1&enablejsapi=1&rel=0&modestbranding=1&showsearch=0&loop=1&playlist=aUzTjuWlwq84",
+    },
+	"20211023 011508 CH1 MERLINWR200P309": {
+        "preview": "https://www.youtube.com/embed/rGu4ZmcC5UI?autoplay=1&enablejsapi=1&rel=0&modestbranding=1&showsearch=0&loop=1&playlist=rGu4ZmcC5UI",
+    },
+	"20211023 031511 CH1 MERLINWR200P309": {
+        "preview": "https://www.youtube.com/embed/ry-um2nG_sY?autoplay=1&enablejsapi=1&rel=0&modestbranding=1&showsearch=0&loop=1&playlist=ry-um2nG_sY",
+    },
+	"20211023 171228 CH1 MERLINWR200P309": {
+        "preview": "https://www.youtube.com/embed/3wIhEbM5ifQ?autoplay=1&enablejsapi=1&rel=0&modestbranding=1&showsearch=0&loop=1&playlist=3wIhEbM5ifQ",
+    },
+	"20211023 131228 CH1 MERLINWR200P309": {
+        "preview": "https://www.youtube.com/embed/wcLb3B1WHdk?autoplay=1&enablejsapi=1&rel=0&modestbranding=1&showsearch=0&loop=1&playlist=wcLb3B1WHdk",
+    },
 };
 
 var iframes = document.querySelectorAll('.all_ifr');
@@ -116,8 +225,7 @@ function tmp_ifr_sfpoc(idbkttp,ifr,prm_isi){
 		document.getElementById('tmp_url_print2').style.display="block";
 		document.getElementById('tmp_url_download2').style.display="block";
 	}else if(ifr == 7){
-		
-		document.getElementById('iframetbl'+ifr).src = ifr3[prm_isi].preview;
+		document.getElementById('iframetbl'+ifr).src = ifr3["20211016 092822 CH1 MERLINWR200P309"].preview;
 	}
 	
 	if(prm_isi == "cpmonitoring"){
@@ -131,8 +239,35 @@ function tmp_ifr_sfpoc(idbkttp,ifr,prm_isi){
 		document.getElementById('search_kp_point').style.display="block";
 		document.getElementById('prm_posisi_dd_area').value=prm_isi;
 		
+	}else if(prm_isi == "visual_rov_2021"){
+		
+		document.getElementById('tmp_visual_rov').style.display="block";
+		document.getElementById('prm_posisi_dd_area').value=prm_isi;
+		visual_rov_f();
+		
 	}
 	
+	
+}
+
+function visual_rov_f(){
+
+	var rovDropdown = document.getElementById('visual_rov');
+
+	while (rovDropdown.firstChild) {
+        rovDropdown.removeChild(rovDropdown.firstChild);
+    }
+
+    for (var stasiun in ifr3) {
+        if (ifr3.hasOwnProperty(stasiun)) {
+            var option = document.createElement('option');
+            option.value = ifr3[stasiun].preview;
+            option.text = stasiun;
+            rovDropdown.appendChild(option);
+        }
+    }
+    
+    $('#visual_rov').trigger('chosen:updated');
 	
 }
 
@@ -288,6 +423,14 @@ $("#kp_point").chosen().change(function(){
 
     var selectedStasiun = $(this).val();
 	document.getElementById('iframetbl5').src=selectedStasiun;
+	
+    
+});
+
+$("#visual_rov").chosen().change(function(){
+
+    var selectedrov = $(this).val();
+	document.getElementById('iframetbl7').src=selectedrov;
 	
     
 });
